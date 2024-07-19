@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
   srcDir: "src/",
   routeRules: {
@@ -21,9 +22,9 @@ export default defineNuxtConfig({
       prefix: '',
       /**
        * Directory that the component lives in.
-       * @default "./components/ui"
+       * @default "./src/components/ui"
        */
-      componentDir: './components/ui'
+      componentDir: './src/components/ui'
     },
   vite: {
     server: {
