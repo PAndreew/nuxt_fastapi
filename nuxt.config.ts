@@ -12,5 +12,27 @@ export default defineNuxtConfig({
     '/openapi.json': {
       proxy: "http://127.0.0.1:8000/openapi.json",
     }
-  } 
+  },
+  modules: ['@nuxtjs/tailwindcss', "shadcn-nuxt"],
+  shadcn: {
+      /**
+       * Prefix for all the imported component
+       */
+      prefix: '',
+      /**
+       * Directory that the component lives in.
+       * @default "./components/ui"
+       */
+      componentDir: './components/ui'
+    },
+  vite: {
+    server: {
+      hmr: {
+        overlay: true, // Show errors in the browser overlay
+      },
+      watch: {
+        usePolling: true, // This can help in some environments where the default file watching mechanism might not work properly
+      },
+    },
+  },
 })
